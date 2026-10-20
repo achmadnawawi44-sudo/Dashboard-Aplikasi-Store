@@ -20,7 +20,7 @@
 
   .dashboard {
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     animation: fadeIn 0.6s ease;
   }
 
@@ -136,6 +136,11 @@
     box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
   }
 
+  .card-icon.orange {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+  }
+
   /* Card Content */
   .card-title {
     font-size: 20px;
@@ -174,6 +179,7 @@
   }
 
   .card:nth-child(2) .card-arrow { color: #10b981; }
+  .card:nth-child(3) .card-arrow { color: #f59e0b; }
 
   .card:hover .card-arrow { transform: translateX(6px); }
 
@@ -231,6 +237,22 @@
         <div class="card-title">Aplikasi Scan Harga</div>
         <div class="card-desc">
           Cek harga barang dengan cepat menggunakan scan barcode atau QR code.
+        </div>
+      </div>
+      <div class="card-footer">
+        <span>Buka Aplikasi</span>
+        <span class="card-arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Card 3: Scanner Stok Opname -->
+    <a href="https://achmadnawawi44-sudo.github.io/Scanner-Stock-opname-/"
+       target="_blank" rel="noopener noreferrer" class="card">
+      <div>
+        <div class="card-icon orange">📊</div>
+        <div class="card-title">Scanner Stok Opname</div>
+        <div class="card-desc">
+          Lakukan perhitungan stok fisik gudang secara akurat dengan scan barcode.
         </div>
       </div>
       <div class="card-footer">
