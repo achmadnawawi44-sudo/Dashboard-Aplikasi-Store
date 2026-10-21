@@ -71,6 +71,13 @@
     gap: 20px;
   }
 
+  /* Card Wrapper */
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   /* Card */
   .card {
     position: relative;
@@ -89,6 +96,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 220px;
+    flex: 1;
   }
 
   .card::before {
@@ -178,10 +186,62 @@
     transition: transform 0.35s ease;
   }
 
-  .card:nth-child(2) .card-arrow { color: #10b981; }
-  .card:nth-child(3) .card-arrow { color: #f59e0b; }
+  .card-wrapper:nth-child(2) .card-arrow { color: #10b981; }
+  .card-wrapper:nth-child(3) .card-arrow { color: #f59e0b; }
 
   .card:hover .card-arrow { transform: translateX(6px); }
+
+  /* Link Buttons */
+  .link-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .link-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    text-decoration: none;
+    color: #e2e8f0;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+  }
+
+  .link-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateX(4px);
+    color: #fff;
+  }
+
+  .link-btn .icon {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .link-btn .text {
+    flex: 1;
+    line-height: 1.3;
+  }
+
+  .link-btn .text small {
+    display: block;
+    font-size: 10px;
+    color: #64748b;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  .link-btn.spreadsheet:hover { border-color: rgba(16, 185, 129, 0.6); }
+  .link-btn.supabase:hover    { border-color: rgba(16, 185, 129, 0.6); }
 
   /* Footer */
   .footer {
@@ -198,6 +258,7 @@
     .logo { width: 64px; height: 64px; font-size: 32px; }
     .card { padding: 22px 20px; min-height: 200px; }
     .card-title { font-size: 18px; }
+    .link-btn { font-size: 12px; padding: 10px 12px; }
   }
 </style>
 </head>
@@ -213,53 +274,80 @@
 
   <div class="grid">
 
-    <!-- Card 1: Aplikasi Datang Barang -->
-    <a href="https://achmadnawawi44-sudo.github.io/Aplikasi-Datang-Barang-New/"
-       target="_blank" rel="noopener noreferrer" class="card">
-      <div>
-        <div class="card-icon blue">📦</div>
-        <div class="card-title">Aplikasi Datang Barang</div>
-        <div class="card-desc">
-          Kelola pencatatan barang masuk, cek fisik, dan surat jalan dengan mudah.
+    <!-- ================= Card 1: Aplikasi Datang Barang ================= -->
+    <div class="card-wrapper">
+      <a href="https://achmadnawawi44-sudo.github.io/Aplikasi-Datang-Barang-New/"
+         target="_blank" rel="noopener noreferrer" class="card">
+        <div>
+          <div class="card-icon blue">📦</div>
+          <div class="card-title">Aplikasi Datang Barang</div>
+          <div class="card-desc">
+            Kelola pencatatan barang masuk, cek fisik, dan surat jalan dengan mudah.
+          </div>
         </div>
+        <div class="card-footer">
+          <span>Buka Aplikasi</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+      <div class="link-buttons">
+        <a href="https://docs.google.com/spreadsheets/d/1lY7xnyK-NFFWaTcMbggjZVdG2agquW-VPDsJov2I9sc/edit?gid=1129128059#gid=1129128059"
+           target="_blank" rel="noopener noreferrer" class="link-btn spreadsheet">
+          <span class="icon">📊</span>
+          <span class="text">Spreadsheet Datang Barang<small>Buka Google Sheets</small></span>
+        </a>
       </div>
-      <div class="card-footer">
-        <span>Buka Aplikasi</span>
-        <span class="card-arrow">→</span>
-      </div>
-    </a>
+    </div>
 
-    <!-- Card 2: Aplikasi Scan Harga -->
-    <a href="https://achmadnawawi44-sudo.github.io/Scan-Harga/"
-       target="_blank" rel="noopener noreferrer" class="card">
-      <div>
-        <div class="card-icon green">🏷️</div>
-        <div class="card-title">Aplikasi Scan Harga</div>
-        <div class="card-desc">
-          Cek harga barang dengan cepat menggunakan scan barcode atau QR code.
+    <!-- ================= Card 2: Aplikasi Scan Harga ================= -->
+    <div class="card-wrapper">
+      <a href="https://achmadnawawi44-sudo.github.io/Scan-Harga/"
+         target="_blank" rel="noopener noreferrer" class="card">
+        <div>
+          <div class="card-icon green">🏷️</div>
+          <div class="card-title">Aplikasi Scan Harga</div>
+          <div class="card-desc">
+            Cek harga barang dengan cepat menggunakan scan barcode atau QR code.
+          </div>
         </div>
+        <div class="card-footer">
+          <span>Buka Aplikasi</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+      <div class="link-buttons">
+        <a href="https://docs.google.com/spreadsheets/d/11bETGlGynlFwmT-83xgj1ZiVJ-R0cATrJYBu_Kgs8DQ/edit?gid=0#gid=0"
+           target="_blank" rel="noopener noreferrer" class="link-btn spreadsheet">
+          <span class="icon">📊</span>
+          <span class="text">Spreadsheet Scan Harga<small>Buka Google Sheets</small></span>
+        </a>
       </div>
-      <div class="card-footer">
-        <span>Buka Aplikasi</span>
-        <span class="card-arrow">→</span>
-      </div>
-    </a>
+    </div>
 
-    <!-- Card 3: Scanner Stok Opname -->
-    <a href="https://achmadnawawi44-sudo.github.io/Scanner-Stock-opname-/"
-       target="_blank" rel="noopener noreferrer" class="card">
-      <div>
-        <div class="card-icon orange">📊</div>
-        <div class="card-title">Scanner Stok Opname</div>
-        <div class="card-desc">
-          Lakukan perhitungan stok fisik gudang secara akurat dengan scan barcode.
+    <!-- ================= Card 3: Scanner Stok Opname ================= -->
+    <div class="card-wrapper">
+      <a href="https://achmadnawawi44-sudo.github.io/Scanner-Stock-opname-/"
+         target="_blank" rel="noopener noreferrer" class="card">
+        <div>
+          <div class="card-icon orange">📊</div>
+          <div class="card-title">Scanner Stok Opname</div>
+          <div class="card-desc">
+            Lakukan perhitungan stok fisik gudang secara akurat dengan scan barcode.
+          </div>
         </div>
+        <div class="card-footer">
+          <span>Buka Aplikasi</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+      <div class="link-buttons">
+        <a href="https://supabase.com/dashboard/org/efmpdimpbhpisbjnzyso"
+           target="_blank" rel="noopener noreferrer" class="link-btn supabase">
+          <span class="icon">⚡</span>
+          <span class="text">Supabase Stok Opname<small>Buka Database Supabase</small></span>
+        </a>
       </div>
-      <div class="card-footer">
-        <span>Buka Aplikasi</span>
-        <span class="card-arrow">→</span>
-      </div>
-    </a>
+    </div>
 
   </div>
 
