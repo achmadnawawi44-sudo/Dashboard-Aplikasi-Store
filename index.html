@@ -20,7 +20,7 @@
 
   .dashboard {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
     animation: fadeIn 0.6s ease;
   }
 
@@ -67,7 +67,7 @@
   /* Grid */
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
   }
 
@@ -149,6 +149,11 @@
     box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
   }
 
+  .card-icon.purple {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+  }
+
   /* Card Content */
   .card-title {
     font-size: 20px;
@@ -188,6 +193,7 @@
 
   .card-wrapper:nth-child(2) .card-arrow { color: #10b981; }
   .card-wrapper:nth-child(3) .card-arrow { color: #f59e0b; }
+  .card-wrapper:nth-child(4) .card-arrow { color: #8b5cf6; }
 
   .card:hover .card-arrow { transform: translateX(6px); }
 
@@ -242,6 +248,7 @@
 
   .link-btn.spreadsheet:hover { border-color: rgba(16, 185, 129, 0.6); }
   .link-btn.supabase:hover    { border-color: rgba(16, 185, 129, 0.6); }
+  .link-btn.appscript:hover   { border-color: rgba(139, 92, 246, 0.6); }
 
   /* Footer */
   .footer {
@@ -345,6 +352,31 @@
            target="_blank" rel="noopener noreferrer" class="link-btn supabase">
           <span class="icon">⚡</span>
           <span class="text">Supabase Stok Opname<small>Buka Database Supabase</small></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ================= Card 4: Aplikasi Kasir ================= -->
+    <div class="card-wrapper">
+      <a href="https://script.google.com/macros/s/AKfycbxJiJ55bzOKB2faMksaQZt6nQLTtffP0TvnEKLvfkzHurczywH3edrsMVaOaZLPgOiMlw/exec"
+         target="_blank" rel="noopener noreferrer" class="card">
+        <div>
+          <div class="card-icon purple">🛒</div>
+          <div class="card-title">Aplikasi Kasir</div>
+          <div class="card-desc">
+            Kelola transaksi penjualan, hitung total belanja, dan cetak struk dengan cepat.
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>Buka Aplikasi</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+      <div class="link-buttons">
+        <a href="https://docs.google.com/spreadsheets/d/1AXPxStDYUZb-Y-t5I8BxGCg3wrfzYsC4cL4UpgfuKxw/edit?gid=1828206045#gid=1828206045"
+           target="_blank" rel="noopener noreferrer" class="link-btn spreadsheet">
+          <span class="icon">📊</span>
+          <span class="text">Spreadsheet Kasir<small>Buka Google Sheets</small></span>
         </a>
       </div>
     </div>
