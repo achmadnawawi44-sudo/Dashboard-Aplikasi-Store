@@ -154,6 +154,11 @@
     box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
   }
 
+  .card-icon.pink {
+    background: linear-gradient(135deg, #ec4899, #db2777);
+    box-shadow: 0 8px 24px rgba(236, 72, 153, 0.4);
+  }
+
   /* Card Content */
   .card-title {
     font-size: 20px;
@@ -194,6 +199,7 @@
   .card-wrapper:nth-child(2) .card-arrow { color: #10b981; }
   .card-wrapper:nth-child(3) .card-arrow { color: #f59e0b; }
   .card-wrapper:nth-child(4) .card-arrow { color: #8b5cf6; }
+  .card-wrapper:nth-child(5) .card-arrow { color: #ec4899; }
 
   .card:hover .card-arrow { transform: translateX(6px); }
 
@@ -249,6 +255,7 @@
   .link-btn.spreadsheet:hover { border-color: rgba(16, 185, 129, 0.6); }
   .link-btn.supabase:hover    { border-color: rgba(16, 185, 129, 0.6); }
   .link-btn.appscript:hover   { border-color: rgba(139, 92, 246, 0.6); }
+  .link-btn.pink:hover        { border-color: rgba(236, 72, 153, 0.6); }
 
   /* Footer */
   .footer {
@@ -377,6 +384,31 @@
            target="_blank" rel="noopener noreferrer" class="link-btn spreadsheet">
           <span class="icon">📊</span>
           <span class="text">Spreadsheet Kasir<small>Buka Google Sheets</small></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ================= Card 5: Retail Management System (RMS) ================= -->
+    <div class="card-wrapper">
+      <a href="https://achmadnawawi44-sudo.github.io/Login-Retail-Management-System-RMS-/"
+         target="_blank" rel="noopener noreferrer" class="card">
+        <div>
+          <div class="card-icon pink">🏬</div>
+          <div class="card-title">Retail Management System</div>
+          <div class="card-desc">
+            Kelola bisnis retail secara menyeluruh: stok, penjualan, pelanggan, dan laporan dalam satu sistem.
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>Buka Aplikasi</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+      <div class="link-buttons">
+        <a href="https://supabase.com/dashboard/project/dlesiyjeftpvftutwtmb/editor"
+           target="_blank" rel="noopener noreferrer" class="link-btn supabase">
+          <span class="icon">⚡</span>
+          <span class="text">Supabase RMS<small>Buka Database Supabase</small></span>
         </a>
       </div>
     </div>
